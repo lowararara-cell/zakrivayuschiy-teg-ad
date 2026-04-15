@@ -1,16 +1,54 @@
-/* Здесь вы напишете основную часть стилей страницы.
+/* В этом файле уже написаны некоторые базовые стили, которые сбрасывают или преобразуют дефольное браузерное поведение.
+Здесь же лежит утилитарный класс visually-hidden на случай, если нужно скрыть какой-то элемент, но оставить доступным для скринридера.
+Вы можете изменять этот файл или дополнять. Но скорее всего, вам это не потребуется. */
 
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
 
-*/
+body {
+  margin: 0 auto;
+}
 
-.page {
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input {
+  color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
